@@ -1,0 +1,30 @@
+body {
+  background-color: #2a2a2a;
+  color: #000000;
+}
+
+.panel, .well {
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+}
+
+.panel-heading, .panel-body {
+  background-color: #3a3a3a;
+  color: #222222;
+}
+
+.form-control {
+  background-color: #4a4a4a;
+  color: #ffffff;
+  border-color: #4a4a4a;
+}
+
+.btn {
+  background-color: #111111;
+  color: #ffffff;
+  border-color: #4a4a4a;
+}
+
+h1, h2, h3, h4, h5, h6, label, .control-label {
+  color: #ffffff;
+}

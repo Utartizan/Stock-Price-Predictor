@@ -1,0 +1,32 @@
+---
+title: "SPDA"
+output: html_document
+date: "2024-09-20"
+---
+
+```{r}
+library(shiny)
+library(quantmod)
+library(caret)
+library(xts)
+library(ggplot2)
+
+# List of S&P 500 stocks (you can get the full list from a reliable source)
+sp500_stocks <- c("AAPL", "MSFT", "GOOGL", "AMZN", "FB", "BRK.B", "JNJ", "V", "PG", "JPM")
+
+ui <- fluidPage(
+  titlePanel("Stock Price Prediction"),
+  sidebarLayout(
+    sidebarPanel(
+      selectInput("stock", "Select Stock Symbol:", choices = sp500_stocks),
+      dateRangeInput("dates", "Date Range:", start = "2020-01-01", end = Sys.Date()),
+      actionButton("predict", "Predict")
+    ),
+    mainPanel(
+      plotOutput("plot"),
+      textOutput("metrics")
+    )
+  )
+)
+
+```
